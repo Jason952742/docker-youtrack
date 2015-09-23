@@ -10,4 +10,6 @@
 
 YouTrack启动后在容器中侦听80端口（映射主机端口到80）。
 
-YouTrack将数据和备份通过volume映射到主机的"/opt/youtrack/data/"和"/opt/youtrack/backup/"。
+YouTrack将数据和备份保存到容器的 /root/teamsysdata 和 /root/teamsysdata-backup 。如果你想要重用数据, 需要为这二个路径映射volume。如:
+
+docker run --name="youtrack" -v /path/on/host/teamsysdata:/root/teamsysdata -v /path/on/host/teamsysdata-backup:/root/teamsysdata-backup
