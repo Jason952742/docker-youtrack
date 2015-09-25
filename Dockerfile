@@ -11,7 +11,7 @@ ENV APP_SUFFIX youtrack
 ENV APP_DISTFILE youtrack-${APP_BUILD}.zip
 ENV APP_PREFIX /opt
 ENV APP_DIR $APP_PREFIX/$APP_SUFFIX
-ENV APP_HOME /home/$APP_SUFFIX
+ENV APP_HOME /var/lib/$APP_SUFFIX
 
 # downloading and unpacking the distribution
 WORKDIR $APP_PREFIX
